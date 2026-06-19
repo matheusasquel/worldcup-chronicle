@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Copa do Mundo FIFA (1930–2022) — Portal Histórico</title>
+<meta name="description" content="A história completa da Copa do Mundo FIFA de 1930 a 2022: campeões, finais, estatísticas, troféus e linha do tempo." />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="#hero" class="brand">
+      <span class="brand-mark">★</span>
+      <span>FIFA <strong>World Cup</strong></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#hero">Início</a>
+      <a href="#historia">História</a>
+      <a href="#campeoes">Campeões</a>
+      <a href="#finais">Finais</a>
+      <a href="#estatisticas">Estatísticas</a>
+      <a href="#cartoes">Cartões</a>
+      <a href="#trofeus">Troféus</a>
+      <a href="#maiores">Maiores</a>
+      <a href="#timeline">Linha do Tempo</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="hero" class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">1930 — 2022</p>
+    <h1>Copa do Mundo <span class="gold">FIFA</span></h1>
+    <p class="hero-sub">A história completa do maior torneio de futebol do planeta.</p>
+    <div class="hero-cta">
+      <a href="#historia" class="btn btn-primary">Explorar a História</a>
+      <a href="#campeoes" class="btn btn-ghost">Ver Campeões</a>
+    </div>
+  </div>
+  <div class="hero-trophy" aria-hidden="true">
+    <svg viewBox="0 0 200 280" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="g" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0" stop-color="#ffe27a"/>
+          <stop offset="0.5" stop-color="#d4a017"/>
+          <stop offset="1" stop-color="#8a5a00"/>
+        </linearGradient>
+      </defs>
+      <path fill="url(#g)" d="M70 20 Q100 -10 130 20 Q150 60 130 110 Q170 130 150 170 Q120 200 100 180 Q80 200 50 170 Q30 130 70 110 Q50 60 70 20 Z"/>
+      <rect x="70" y="195" width="60" height="20" fill="url(#g)"/>
+      <rect x="55" y="215" width="90" height="14" rx="3" fill="#2a1a05"/>
+      <rect x="45" y="229" width="110" height="22" rx="4" fill="#1a1102"/>
+    </svg>
+  </div>
+  <div class="hero-stats">
+    <div class="stat"><span class="num" data-count="22">0</span><span class="lbl">Copas realizadas</span></div>
+    <div class="stat"><span class="num" data-count="8">0</span><span class="lbl">Países campeões</span></div>
+    <div class="stat"><span class="num" data-count="2548">0</span><span class="lbl">Gols marcados</span></div>
+    <div class="stat"><span class="num" data-count="84">0</span><span class="lbl">Seleções participantes</span></div>
+  </div>
+</section>
+
+<!-- HISTÓRIA -->
+<section id="historia" class="section reveal">
+  <div class="container">
+    <h2 class="section-title"><span>História</span> da Copa</h2>
+    <p class="section-lead">Da idealização em 1928 ao espetáculo global de 2022, quase um século de futebol mundial.</p>
+    <div class="timeline-v" id="historiaTimeline"></div>
+  </div>
+</section>
+
+<!-- CAMPEÕES -->
+<section id="campeoes" class="section alt reveal">
+  <div class="container">
+    <h2 class="section-title"><span>Campeões</span> e Vice-Campeões</h2>
+    <p class="section-lead">Todas as 22 edições da Copa do Mundo FIFA.</p>
+    <div class="table-tools">
+      <input id="searchInput" type="search" placeholder="🔎 Pesquisar por país, ano ou sede..." />
+      <select id="filterCampeao"><option value="">Filtrar por campeão</option></select>
+      <button id="sortYear" class="btn btn-ghost btn-sm">Ordenar por Ano ⇅</button>
+    </div>
+    <div class="table-wrap">
+      <table class="champ-table" id="champTable">
+        <thead><tr><th>Ano</th><th>Sede</th><th>Campeão</th><th>Vice</th><th>Final</th><th>3º</th><th>4º</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- FINAIS -->
+<section id="finais" class="section reveal">
+  <div class="container">
+    <h2 class="section-title"><span>Finais</span> Detalhadas</h2>
+    <p class="section-lead">Cada decisão tem sua história. Confira as estatísticas das grandes finais.</p>
+    <div class="cards-grid" id="finalsGrid"></div>
+  </div>
+</section>
+
+<!-- ESTATÍSTICAS -->
+<section id="estatisticas" class="section alt reveal">
+  <div class="container">
+    <h2 class="section-title"><span>Estatísticas</span> das Copas</h2>
+    <p class="section-lead">Passe o mouse sobre as barras para detalhes de cada edição.</p>
+    <div class="charts-grid">
+      <div class="chart-card"><h3>Gols por edição</h3><canvas id="chartGols" height="260"></canvas></div>
+      <div class="chart-card"><h3>Seleções por edição</h3><canvas id="chartSelec" height="260"></canvas></div>
+      <div class="chart-card"><h3>Cartões amarelos por edição</h3><canvas id="chartAm" height="260"></canvas></div>
+      <div class="chart-card"><h3>Cartões vermelhos por edição</h3><canvas id="chartVer" height="260"></canvas></div>
+    </div>
+  </div>
+</section>
+
+<!-- CARTÕES -->
+<section id="cartoes" class="section reveal">
+  <div class="container">
+    <h2 class="section-title"><span>Cartões</span> e Disciplina</h2>
+    <p class="section-lead">A evolução da disciplina no torneio mais assistido do mundo.</p>
+    <div class="discipline-grid">
+      <div class="discipline-card highlight">
+        <h3>⚠️ Batalha de Nuremberg</h3>
+        <p class="match">Portugal <strong>1 x 0</strong> Holanda — 2006</p>
+        <ul>
+          <li><span class="dot yellow"></span> 16 cartões amarelos</li>
+          <li><span class="dot red"></span> 4 cartões vermelhos</li>
+          <li>Árbitro: Valentin Ivanov (Rússia)</li>
+        </ul>
+        <p class="quote">"O recorde de cartões em uma única partida de Copa do Mundo."</p>
+      </div>
+      <div class="discipline-card">
+        <h3>Ranking de seleções mais punidas</h3>
+        <ol class="rank" id="disciplineRank"></ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TROFÉUS -->
+<section id="trofeus" class="section alt reveal">
+  <div class="container">
+    <h2 class="section-title"><span>Troféus</span> da Copa</h2>
+    <div class="trophies">
+      <article class="trophy-card">
+        <div class="trophy-art rimet">🏆</div>
+        <h3>Taça Jules Rimet</h3>
+        <ul>
+          <li>Utilizada entre <strong>1930 e 1970</strong></li>
+          <li>Criada por Abel Lafleur</li>
+          <li>Brasil ficou com ela definitivamente em <strong>1970</strong></li>
+          <li>Roubada em <strong>1983</strong> e nunca recuperada</li>
+        </ul>
+      </article>
+      <article class="trophy-card">
+        <div class="trophy-art atual">🏆</div>
+        <h3>Taça FIFA (atual)</h3>
+        <ul>
+          <li>Criada em <strong>1974</strong></li>
+          <li>Designer: <strong>Silvio Gazzaniga</strong></li>
+          <li>Ouro <strong>18 quilates</strong></li>
+          <li>Altura: <strong>36,8 cm</strong></li>
+          <li>Peso: <strong>6,175 kg</strong></li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- MAIORES CAMPEÕES -->
+<section id="maiores" class="section reveal">
+  <div class="container">
+    <h2 class="section-title"><span>Maiores</span> Campeões</h2>
+    <div class="champ-grid" id="champCards"></div>
+  </div>
+</section>
+
+<!-- LINHA DO TEMPO -->
+<section id="timeline" class="section alt reveal">
+  <div class="container">
+    <h2 class="section-title"><span>Linha</span> do Tempo</h2>
+    <p class="section-lead">Clique em um ano para ver os detalhes da edição.</p>
+    <div class="timeline-h" id="timelineH"></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>© Portal História da Copa do Mundo FIFA — Conteúdo educacional sobre as edições de 1930 a 2022.</p>
+  </div>
+</footer>
+
+<button id="backToTop" class="back-to-top" aria-label="Voltar ao topo">↑</button>
+
+<!-- MODAL -->
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-card" role="dialog" aria-modal="true">
+    <button class="modal-close" data-close aria-label="Fechar">✕</button>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<div class="chart-tooltip" id="tooltip"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

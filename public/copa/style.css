@@ -323,7 +323,7 @@ img{max-width:100%;display:block}
     border-bottom:1px solid var(--border);
   }
   .nav-links.open{display:flex}
-  .hero-trophy{display:none}
+  .hero-trophy,.hero-logo{display:none}
   .hero-stats{grid-template-columns:repeat(2,1fr)}
   .timeline-v::before{left:20px}
   .tl-item{width:100%;left:0!important;padding:14px 14px 14px 50px;text-align:left!important}

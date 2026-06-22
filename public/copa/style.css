@@ -104,9 +104,9 @@ img{max-width:100%;display:block}
 .btn-ghost:hover{background:rgba(255,255,255,.12)}
 .hero-trophy{
   position:absolute;right:5%;top:50%;transform:translateY(-50%);
-  width:280px;opacity:.35;pointer-events:none;animation:float 6s ease-in-out infinite;
+  width:300px;opacity:.55;pointer-events:none;animation:float 6s ease-in-out infinite;
 }
-.hero-trophy img{width:100%;height:auto;filter:drop-shadow(0 10px 30px rgba(241,196,15,.5))}
+.hero-trophy img{width:100%;height:auto;filter:brightness(1.1) drop-shadow(0 12px 40px rgba(241,196,15,.6))}
 @keyframes float{0%,100%{transform:translateY(-50%)}50%{transform:translateY(calc(-50% - 18px))}}
 .hero-stats{
   margin-top:60px;width:100%;max-width:1000px;

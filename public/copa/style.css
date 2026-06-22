@@ -107,6 +107,11 @@ img{max-width:100%;display:block}
   width:300px;opacity:.55;pointer-events:none;animation:float 6s ease-in-out infinite;
 }
 .hero-trophy img{width:100%;height:auto;filter:brightness(1.1) drop-shadow(0 12px 40px rgba(241,196,15,.6))}
+.hero-logo{
+  position:absolute;left:5%;top:50%;transform:translateY(-50%);
+  width:260px;opacity:.45;pointer-events:none;animation:float 6s ease-in-out infinite reverse;
+}
+.hero-logo img{width:100%;height:auto;filter:brightness(1.2) drop-shadow(0 12px 40px rgba(255,255,255,.25))}
 @keyframes float{0%,100%{transform:translateY(-50%)}50%{transform:translateY(calc(-50% - 18px))}}
 .hero-stats{
   margin-top:60px;width:100%;max-width:1000px;
@@ -318,7 +323,7 @@ img{max-width:100%;display:block}
     border-bottom:1px solid var(--border);
   }
   .nav-links.open{display:flex}
-  .hero-trophy{display:none}
+  .hero-trophy,.hero-logo{display:none}
   .hero-stats{grid-template-columns:repeat(2,1fr)}
   .timeline-v::before{left:20px}
   .tl-item{width:100%;left:0!important;padding:14px 14px 14px 50px;text-align:left!important}

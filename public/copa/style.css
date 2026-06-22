@@ -236,8 +236,9 @@ img{max-width:100%;display:block}
   padding:30px;text-align:center;transition:transform .3s,border-color .3s,box-shadow .3s;
 }
 .trophy-card:hover{transform:translateY(-8px) rotateZ(-1deg);border-color:var(--gold);box-shadow:0 20px 40px rgba(241,196,15,.18)}
-.trophy-art{font-size:90px;line-height:1;margin-bottom:14px;filter:drop-shadow(0 6px 12px rgba(241,196,15,.4));transition:transform .4s}
-.trophy-card:hover .trophy-art{transform:scale(1.15) rotate(-6deg)}
+.trophy-art{font-size:90px;line-height:1;margin-bottom:14px;transition:transform .4s;position:relative}
+.trophy-art img.trophy-img{max-height:160px;margin:0 auto;filter:drop-shadow(0 6px 12px rgba(241,196,15,.4));transition:transform .4s}
+.trophy-card:hover .trophy-art img.trophy-img{transform:scale(1.15) rotate(-6deg)}
 .trophy-card h3{color:var(--gold);margin-bottom:14px}
 .trophy-card ul{list-style:none;text-align:left;color:var(--muted)}
 .trophy-card ul li{padding:6px 0;border-bottom:1px dashed rgba(255,255,255,.06)}

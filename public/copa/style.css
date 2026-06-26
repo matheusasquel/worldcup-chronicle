@@ -338,3 +338,8 @@ img{max-width:100%;display:block}
   .modal-card{padding:22px}
   .modal-body .grid{grid-template-columns:1fr}
 }
+/* Credits */
+.footer-credits{margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid rgba(212,175,55,.25);text-align:center}
+.footer-credits-title{font-size:1rem;color:var(--gold,#d4af37);margin:0 0 .35rem}
+.footer-credits-title strong{color:#fff}
+.footer-credits-sub{font-size:.875rem;color:rgba(255,255,255,.7);margin:.15rem 0}

@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect } from "react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -13,17 +14,12 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  useEffect(() => {
+    window.location.replace("/copa/index.html");
+  }, []);
   return (
-    <iframe
-      src="/copa/index.html"
-      title="Copa do Mundo FIFA"
-      style={{
-        position: "fixed",
-        inset: 0,
-        width: "100vw",
-        height: "100vh",
-        border: "none",
-      }}
-    />
+    <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", background: "#0b0b0f", color: "#f5c451", fontFamily: "system-ui, sans-serif" }}>
+      <p>Carregando portal da Copa do Mundo…</p>
+    </div>
   );
 }

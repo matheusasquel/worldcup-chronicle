@@ -1,43 +1,59 @@
-# 🌐 [Nome do Seu Projeto ou Site]
+# 🏆 Portal História da Copa do Mundo FIFA (1930–2022)
 
-> [Uma frase curta e direta descrevendo o objetivo do seu site. Ex: "Meu portfólio pessoal construído para exibir meus projetos de desenvolvimento front-end."]
+> Portal esportivo moderno, responsivo e interativo que reúne toda a história da Copa do Mundo FIFA — das 13 seleções de 1930 ao tetra argentino em 2022.
 
-Aqui você pode ver o projeto finalizado: **[👉 Acesse o site aqui](https://github.io)**
+Construído com **HTML5**, **CSS3** e **JavaScript puro (Vanilla JS)** — sem frameworks, sem bibliotecas externas e sem necessidade de servidor.
 
 ---
 
 ## 🚀 Funcionalidades
 
-- **[Exemplo: Design Responsivo]** - Adaptado para celulares, tablets e computadores.
-- **[Exemplo: Modo Escuro]** - Alternância de tema para melhor conforto visual.
-- **[Exemplo: Formulário de Contato]** - Integrado com envio de e-mails direto.
+- **9 seções completas** — Início, História, Campeões, Finais, Estatísticas, Cartões, Troféus, Maiores Campeões e Linha do Tempo.
+- **Dados de todas as 22 edições** — de 1930 (Uruguai) a 2022 (Catar), com sede, campeão, vice, placar, artilheiro e público.
+- **Tabela de campeões com filtro dinâmico** — pesquise por país, ano ou sede em tempo real.
+- **Gráficos interativos via Canvas API** — barras com tooltips customizados, sem Chart.js.
+- **Contadores animados** — disparados via `IntersectionObserver` ao entrar na viewport.
+- **Linha do tempo cronológica** com modal de detalhes por edição.
+- **Hero com taça e logo FIFA** animados (efeito *floating*).
+- **Design premium** — tema escuro com detalhes em ouro, menu fixo com *blur*, animações *fade-in* e efeitos *hover*.
+- **100% responsivo** — Flexbox, CSS Grid e media queries para mobile, tablet e desktop.
 
-## 🛠️ Tecnologias Utilizadas
+## 🛠️ Tecnologias
 
-Este projeto foi desenvolvido utilizando as seguintes tecnologias:
+- **HTML5** — estrutura semântica
+- **CSS3** — Flexbox, Grid, animações, variáveis CSS
+- **JavaScript (Vanilla)** — Canvas API, IntersectionObserver, filtros e modais
 
-- [HTML5](https://mozilla.org) - Estrutura da página.
-- [CSS3](https://mozilla.org) - Estilização e layout.
-- [JavaScript](https://mozilla.org) - Comportamentos dinâmicos e interatividade.
-- [GitHub Pages](https://github.com) - Hospedagem gratuita do site.
+Sem React, sem build, sem dependências.
 
-## 📥 Como executar o projeto localmente
+## 📁 Estrutura
 
-Se você quiser baixar e testar este projeto no seu computador, siga os passos abaixo:
+```
+public/copa/
+├── index.html       # Estrutura das 9 seções
+├── style.css        # Tema escuro + ouro, responsivo
+├── script.js        # Dados das 22 copas, gráficos, filtros
+├── taca-fifa.png    # Imagem da taça
+└── logo-fifa.png    # Logo da FIFA
+```
 
-1. Clone este repositório:
-   ```bash
-   git clone https://github.com
-   ```
-2. Navegue até a pasta do projeto:
-   ```bash
-   cd seu-repositorio
-   ```
-3. Abra o arquivo `index.html` em qualquer navegador de sua preferência.
+## 📥 Como executar
+
+Basta abrir o arquivo no navegador:
+
+```bash
+# clone o repositório
+git clone <url-do-repo>
+
+# abra diretamente
+open public/copa/index.html
+```
+
+Ou acesse pelo servidor de desenvolvimento em `/copa/`.
 
 ## 📝 Licença
 
-Este projeto está sob a licença [MIT](./LICENSE) (substitua pelo tipo de licença do seu projeto se houver).
+MIT — livre para uso educacional e pessoal.
 
 ---
-💡 Feito com 💙 por [[Seu Nome](https://github.com)]
+💛 Feito com paixão pelo futebol e pela história da Copa do Mundo.

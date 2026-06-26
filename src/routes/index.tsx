@@ -3,27 +3,27 @@ import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "Copa do Mundo FIFA (1930–2022) — Portal Histórico" },
+      { name: "description", content: "A história completa da Copa do Mundo FIFA de 1930 a 2022: campeões, finais, estatísticas, troféus e linha do tempo." },
+      { property: "og:title", content: "Copa do Mundo FIFA (1930–2022)" },
+      { property: "og:description", content: "Portal histórico completo das 22 edições da Copa do Mundo FIFA." },
     ],
   }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <iframe
+      src="/copa/index.html"
+      title="Copa do Mundo FIFA"
+      style={{
+        position: "fixed",
+        inset: 0,
+        width: "100vw",
+        height: "100vh",
+        border: "none",
+      }}
+    />
   );
 }
